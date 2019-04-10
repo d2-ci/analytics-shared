@@ -22,9 +22,9 @@ describe('The SelectedItems component', function () {
         selectedItemsWrapper = undefined;
     });
 
-    it('matches the snapshot when list is empty', function () {
-        expect(selectedItems()).toMatchSnapshot();
-    });
+    // it('matches the snapshot when list is empty', () => {
+    //     expect(selectedItems()).toMatchSnapshot();
+    // });
 
     describe('list with items', function () {
         beforeEach(function () {
@@ -33,9 +33,9 @@ describe('The SelectedItems component', function () {
                 name: 'rainbow'
             }, { id: 'rr', name: 'rarity' }];
         });
-        it('matches the snapshot with list has items', function () {
-            expect(selectedItems()).toMatchSnapshot();
-        });
+        // it('matches the snapshot with list has items', () => {
+        //     expect(selectedItems()).toMatchSnapshot();
+        // });
 
         it('triggers onDeselect when item double-clicked', function () {
             selectedItems().find('li').first().simulate('doubleClick');
